@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="nav-wrapper">
       <div className="brand">
-        <img width={22} height={22} src="/icon.svg" />
+        <img width={22} height={22} src="/icon-white.svg" />
         <p>
           service <span>energy</span>
         </p>
