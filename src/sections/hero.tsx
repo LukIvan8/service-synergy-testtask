@@ -1,6 +1,5 @@
-import DefaultButton from "./button";
+import DefaultButton from "../components/button";
 import "./hero.scss";
-import "./radial-bg.scss";
 
 const Hero = () => {
   return (
@@ -15,9 +14,6 @@ const Hero = () => {
       <div className="btn-wrap">
         <DefaultButton title="Learn More" />
       </div>
-      {/* <div className="background">
-        <img src="/circles.svg" alt="" />
-      </div> */}
     </div>
   );
 };
