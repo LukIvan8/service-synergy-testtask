@@ -1,18 +1,18 @@
+import About from "./components/about";
+import Footer from "./components/footer";
+import Hero from "./components/hero";
 import Navbar from "./components/navbar";
+import Services from "./components/services";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      {/* <Hero/> */}
-      {/* 
-      Под вопросом, мб нужно будет перенести в секцию
-      <RadialBG /> 
-      */}
-      {/* <About/> */}
-      {/* <Services /> */}
-      {/* <Footer/> */}
-    </div>
+      <Hero />
+      <About />
+      <Services />
+      <Footer />
+    </>
   );
 }
 

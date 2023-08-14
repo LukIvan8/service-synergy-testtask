@@ -1,0 +1,114 @@
+.footer-wrapper {
+  background-image: url("/footer-circles.svg");
+  background-size: cover;
+  background-position: center;
+
+  margin-top: 60px;
+  padding-top: 380px;
+  position: relative;
+  width: 100%;
+  z-index: -2;
+  .footer-divider {
+    top: 170px;
+    position: absolute;
+    background-image: url("/phone.png");
+    background-repeat: no-repeat;
+    max-width: 950px;
+    border-radius: 30px;
+    width: 90%;
+    min-height: 280px;
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .contact-container {
+    background-color: white;
+    color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 32px 32px 0px 0px;
+    background: rgba(241, 237, 227, 0.8);
+    backdrop-filter: blur(100px);
+    z-index: 1;
+    padding: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        font-size: 48px;
+        font-weight: 600;
+
+        @media (max-width: 765px) {
+          font-size: 38px;
+        }
+      }
+
+      .secondary {
+        font-size: 32px;
+        font-weight: 500;
+        @media (max-width: 765px) {
+          font-size: 22px;
+        }
+      }
+      @media (max-width: 765px) {
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+      }
+    }
+    @media (max-width: 765px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      gap: 32px;
+
+      button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: 95%;
+    }
+  }
+  .copyright {
+    text-align: center;
+    padding: 42px;
+    font-size: 15px;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+      padding: 20px;
+    }
+  }
+  @media (min-width: 1440px) {
+    // Позволяет избежать обрезки верхней границы элемента на больших экранах
+    padding-top: calc((((100% / 60%) + 57.7) / 100 * 720px));
+  }
+}
+
+.footer-divider::after {
+  border-radius: 30px;
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(225, 153, 55, 0.16),
+    rgba(225, 153, 55, 0.1),
+    rgba(225, 153, 55, 0.06)
+  );
+}

@@ -1,0 +1,23 @@
+//add to hero
+.background {
+  position: absolute;
+
+  top: 4px;
+  left: 50%;
+  z-index: -1;
+  max-width: 1440px;
+  min-width: 890px;
+  margin-left: -720px;
+  height: 853px;
+  flex-shrink: 0;
+
+  img {
+    position: absolute;
+  }
+}
+
+@media (max-width: 768px) {
+  .background {
+    top: 212px;
+  }
+}

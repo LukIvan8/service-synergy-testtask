@@ -1,12 +1,13 @@
+@use "../main" as *;
+
 .nav-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-}
+  padding: 30px 0;
 
-.nav-wrapper {
   div {
     display: flex;
     flex-direction: row;
@@ -14,15 +15,31 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .nav-wrapper {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
 .brand {
   gap: 8px;
-
+  pointer-events: none;
+  user-select: none;
   p {
     font-size: 18px;
     font-weight: bold;
 
     span {
-      color: #e19937;
+      color: $brand-yellow;
+    }
+  }
+  @media (max-width: 580px) {
+    p {
+      font-size: 15px;
+      span {
+        color: #d49d43;
+      }
     }
   }
 }
@@ -43,30 +60,40 @@
     div:hover {
       cursor: pointer;
     }
-  }
 
-  button {
-    justify-content: center;
-    gap: 10px;
-    background-color: #e19937;
-    padding: 11px 18px;
-    border: 1px solid transparent;
-    background: linear-gradient(#e19937, #e19937) padding-box,
-      linear-gradient(180deg, #e29c3d, #e6a956) border-box;
-
-    color: white;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-
-    p {
-      line-height: 0;
-      font-size: 15px;
-      font-weight: 500;
+    :hover {
+      cursor: pointer;
     }
   }
 
-  button:hover {
+  @media (max-width: 580px) {
+    .links {
+      display: none;
+    }
+  }
+
+  .menu {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 5.8px;
+    align-items: flex-start;
+    gap: 8px;
+    display: none;
+  }
+  @media (max-width: 580px) {
+    .menu {
+      display: flex;
+    }
+  }
+  .menu:hover {
     cursor: pointer;
+  }
+}
+
+@media (max-width: 580px) {
+  .navigation {
+    gap: 8px;
   }
 }
