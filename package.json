@@ -1,7 +1,8 @@
 {
-  "name": "sevice-synergy-testtask",
-  "private": true,
-  "version": "0.0.0",
+  "name": "service-synergy-testtask",
+  "description": "Тестовое задание по верстке сайта service synergy",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
