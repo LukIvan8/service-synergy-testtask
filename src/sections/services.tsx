@@ -4,18 +4,18 @@ import "./services.scss";
 const Services = () => {
   return (
     <>
-      <div className="service-header">
-        <div className="service-background"></div>
-        <div className="divider"></div>
-        <div className="service-content">
-          <p className="title">What we do</p>
-          <p className="secondary">
+      <div className="service__header">
+        <div className="service__bg"></div>
+        <div className="service__divider"></div>
+        <div className="service__content">
+          <p className="service__content__title">What we do</p>
+          <p className="service__content__secondary">
             Our focus is on providing exceptional value to our clients by
             <span> delivering high-quality legal services.</span> We believe in
             building strong, long-term relationships with our clientsbased on
             trust, integrity, and respect.
           </p>
-          <p className="secondary">
+          <p className="service__content__secondary">
             With our help, you can{" "}
             <span>
               navigate legal complexities with confidence and achieve the
@@ -24,7 +24,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-      <div className="service-cards-container">
+      <div className="service__cards">
         <Card
           title="Legal Consultancy"
           text="Our legal consultancy services are designed to help businesses navigate complex legal issues and make informed decisions. Our team of legal experts will work closely with you to understand your unique needs and provide tailored solutions that meet your specific requirements."

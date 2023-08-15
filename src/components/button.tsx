@@ -7,7 +7,7 @@ interface Props {
 
 const DefaultButton = ({ title, nav }: Props) => {
   return (
-    <button className={`main-btn ${nav ? "nav" : ""}`}>
+    <button className={`btn ${nav ? "nav__button" : ""}`}>
       <p>{title}</p>
       <img src="/arrow.svg" alt="" />
     </button>

@@ -3,17 +3,15 @@ import "./hero.scss";
 
 const Hero = () => {
   return (
-    <div className="hero-wrapper">
-      <h2 className="hero-header">
+    <div className="hero">
+      <h2 className="hero__header">
         Where legal knowledge <span>meets business strategy</span>
       </h2>
-      <p className="hero-content">
+      <p className="hero__content">
         Collaborative solutions for <br />
         <span>complex legal challenges.</span>
       </p>
-      <div className="btn-wrap">
-        <DefaultButton title="Learn More" />
-      </div>
+      <DefaultButton title="Learn More" />
     </div>
   );
 };

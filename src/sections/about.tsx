@@ -3,13 +3,13 @@ import "./about.scss";
 const About = () => {
   return (
     <div style={{ position: "relative" }}>
-      <div className="bg"></div>
-      <div className="about-wrapper">
-        <div className="about-title">
+      <div className="about__bg"></div>
+      <div className="about">
+        <div className="about__title">
           <img src="/icon-yellow.svg" alt="" />
           <p> Who we are</p>
         </div>
-        <div className="about-content">
+        <div className="about__content">
           <p>
             We are a team of experienced legal consultants dedicated to helping
             businesses succeed in today's fast-paced and ever-changing business

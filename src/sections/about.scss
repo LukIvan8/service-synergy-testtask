@@ -1,20 +1,4 @@
-.bg {
-  background-image: url("/circles.svg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 850px;
-  z-index: -2;
-  position: absolute;
-  bottom: 0;
-
-  @media (min-width: 1440px) {
-    // Позволяет избежать обрезки верхней границы элемента на больших экранах
-    padding-top: calc((100% / 60%) * 1% + 57.7%);
-  }
-}
-
-.about-wrapper {
+.about {
   max-width: 1200px;
   min-height: 421px;
   margin: 130px auto 0 auto;
@@ -24,49 +8,59 @@
   padding: 60px 48px;
   z-index: -1;
   position: relative;
-}
 
-@media (max-width: 1200px) {
-  .about-wrapper {
+  @media (max-width: 1200px) {
     width: 95%;
     padding-bottom: 95px;
   }
-}
 
-.about-title {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 48px;
-  font-weight: 600;
-}
+  &__bg {
+    background-image: url("/circles.svg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 850px;
+    z-index: -2;
+    position: absolute;
+    bottom: 0;
 
-@media (max-width: 768px) {
-  .about-title {
-    font-size: 36px;
-    justify-content: center;
+    @media (min-width: 1440px) {
+      // Позволяет избежать обрезки верхней границы элемента на больших экранах
+      padding-top: calc((100% / 60%) * 1% + 57.7%);
+    }
   }
-}
 
-.about-content {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 500;
-  font-size: 15px;
-  margin-top: 30px;
-  p {
-    width: 326px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
+  &__title {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+    gap: 14px;
+    font-size: 48px;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 30px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
     p {
-      text-align: center;
+      width: 326px;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }
   }
 }

@@ -1,7 +1,3 @@
-.card-wrapper {
-  position: relative;
-  height: 100%;
-}
 .card {
   padding: 50px;
   background: #f1ede3cc;
@@ -10,13 +6,22 @@
   color: #000;
   height: 100%;
 
-  .card-content {
+  @media (max-width: 575px) {
+    padding: 30px 20px;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__content {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 16px;
 
-    .title {
+    &__title {
       font-size: 32px;
       font-weight: 600;
 
@@ -25,18 +30,28 @@
       }
     }
 
-    .text {
+    &__text {
       font-size: 18px;
       font-weight: 500;
     }
-    .wide-text {
+    &__wide-text {
       display: flex;
       gap: 30px;
-      p {
-        width: 300px;
+
+      @media (max-width: 575px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
       }
+
       @media (max-width: 950px) {
         display: none;
+      }
+
+      p {
+        width: 300px;
       }
     }
 
@@ -54,20 +69,10 @@
         top: 0;
       }
     }
-    @media (max-width: 575px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  @media (max-width: 575px) {
-    padding: 30px 20px;
   }
 }
 
-.card-bg {
+.card__bg {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -80,9 +85,13 @@
 .wide {
   grid-column: span 2;
 
+  @media (max-width: 950px) {
+    grid-column: span 1;
+  }
+
   .card {
-    .card-content {
-      .text {
+    &__content {
+      &__text {
         display: none;
         @media (max-width: 950px) {
           display: block;
@@ -103,9 +112,5 @@
         }
       }
     }
-  }
-
-  @media (max-width: 950px) {
-    grid-column: span 1;
   }
 }

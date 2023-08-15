@@ -3,22 +3,22 @@ import "./navbar.scss";
 
 const Navbar = () => {
   return (
-    <nav className="nav-wrapper">
-      <div className="brand">
+    <nav className="nav">
+      <div className="nav__brand">
         <img width={22} height={22} src="/icon-white.svg" />
         <p>
           service <span>energy</span>
         </p>
       </div>
-      <div className="navigation">
-        <div className="links">
+      <div className="nav__navigation">
+        <div className="nav__links">
           <a>About</a>
           <div>
             Services <img src="/triangle.svg" alt="" />
           </div>
         </div>
         <DefaultButton title="Contact Us" nav />
-        <button className="menu">
+        <button className="nav__menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

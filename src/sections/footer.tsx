@@ -3,12 +3,12 @@ import "./footer.scss";
 
 const Footer = () => {
   return (
-    <div className="footer-wrapper">
-      <div className="footer-divider"></div>
-      <div className="contact-container">
-        <div className="content">
-          <p className="title">Ready to work with us?</p>
-          <p className="secondary">
+    <div className="footer__container">
+      <div className="footer__divider"></div>
+      <div className="footer">
+        <div className="footer__content">
+          <p className="footer__content__title">Ready to work with us?</p>
+          <p className="footer__content__secondary">
             Drop us a line and we will contact you shortly!
           </p>
         </div>

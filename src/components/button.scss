@@ -5,38 +5,38 @@
     linear-gradient(180deg, #e29c3d, #e6a956) border-box;
 }
 
-.main-btn {
+.btn {
   justify-content: center;
   gap: 6px;
   background-color: $brand-yellow;
   border: 1px solid transparent;
   padding: 11px 20px;
-  background: gradient-border($brand-yellow, #e29c3d, #e6a956);
   color: white;
   border-radius: 12px;
   display: flex;
   align-items: center;
+  background: gradient-border($brand-yellow, #e29c3d, #e6a956);
+
+  @media (max-width: 756px) {
+    background: linear-gradient(0deg, #e19937 0%, #e19937 100%),
+      rgba(255, 255, 255, 0.1);
+  }
 
   p {
     line-height: 0;
     font-size: 15px;
     font-weight: 500;
   }
-
-  @media (max-width: 756px) {
-    background: linear-gradient(0deg, #e19937 0%, #e19937 100%),
-      rgba(255, 255, 255, 0.1);
-  }
 }
 
-@media (max-width: 580px) {
-  .nav {
+.btn:hover {
+  cursor: pointer;
+}
+.nav__button {
+  @media (max-width: 580px) {
     padding: 8px 10px 8px 14px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-}
-.main-btn:hover {
-  cursor: pointer;
 }
