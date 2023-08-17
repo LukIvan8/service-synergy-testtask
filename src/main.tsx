@@ -3,11 +3,16 @@ import ReactDOM from "react-dom/client";
 import "./main.scss";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
+import UnderConstruction from "./pages/404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <UnderConstruction />,
   },
 ]);
 

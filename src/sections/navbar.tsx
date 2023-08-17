@@ -2,6 +2,7 @@ import { useState } from "react";
 import DefaultButton from "../components/button";
 import "./navbar.scss";
 import ContactModal from "../components/contact-modal";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [modal, setModal] = useState(false);
@@ -9,15 +10,17 @@ const Navbar = () => {
   return (
     <>
       <nav className="nav">
-        <div className="nav__brand">
-          <img width={22} height={22} src="/icon-white.svg" />
-          <p>
-            service <span>energy</span>
-          </p>
-        </div>
+        <Link to="/">
+          <div className="nav__brand">
+            <img width={22} height={22} src="/icon-white.svg" />
+            <p>
+              service <span>energy</span>
+            </p>
+          </div>
+        </Link>
         <div className="nav__navigation">
           <div className="nav__links">
-            <a>About</a>
+            <Link to="/about">About</Link>
             <div>
               Services <img src="/triangle.svg" alt="" />
             </div>

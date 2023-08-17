@@ -11,7 +11,7 @@ const Hero = () => {
         Collaborative solutions for <br />
         <span>complex legal challenges.</span>
       </p>
-      <DefaultButton title="Learn More" />
+      <DefaultButton href="/about" title="Learn More" />
     </div>
   );
 };

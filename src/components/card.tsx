@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./card.scss";
 
 interface Props {
@@ -26,7 +27,7 @@ const Card = ({ title, text, image, wide, wideText }: Props) => {
             </div>
           ) : undefined}
           <p className="card__content__text">{text}</p>
-          <a href="">learn more</a>
+          <Link to="/about">learn more</Link>
         </div>
       </div>
     </div>
