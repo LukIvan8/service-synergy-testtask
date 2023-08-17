@@ -1,0 +1,59 @@
+@use "../main.scss" as *;
+
+.modal {
+  background-color: #efefef;
+  color: black;
+  width: 450px;
+  border-radius: 15px;
+  padding: 24px 24px 36px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 460px) {
+    width: 95%;
+  }
+  &__container {
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    height: 100dvh;
+    width: 100%;
+    background-color: #00000077;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  &__secondary {
+    font-size: 18px;
+  }
+
+  &__input {
+    color: rgba(0, 0, 0, 0.8);
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: transparent;
+    transition: all 0.3s ease 0s;
+
+    &:focus {
+      box-shadow: $brand-yellow 0px 0px 10px;
+      border: 1px solid $brand-yellow;
+    }
+  }
+  button:hover {
+    background-color: lighten($color: $brand-yellow, $amount: 10);
+  }
+}

@@ -16,6 +16,9 @@
   display: flex;
   align-items: center;
   background: gradient-border($brand-yellow, #e29c3d, #e6a956);
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (max-width: 756px) {
     background: linear-gradient(0deg, #e19937 0%, #e19937 100%),
@@ -29,9 +32,6 @@
   }
 }
 
-.btn:hover {
-  cursor: pointer;
-}
 .nav__button {
   @media (max-width: 580px) {
     padding: 8px 10px 8px 14px;
