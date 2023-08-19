@@ -1,6 +1,7 @@
 @use "../main" as *;
 
 .nav {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,15 +14,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  div {
+  &__brand {
+    gap: 8px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100%;
-  }
 
-  &__brand {
-    gap: 8px;
     pointer-events: none;
     user-select: none;
     p {
@@ -40,6 +39,9 @@
   }
 
   &__navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 35px;
     font-size: 15px;
     font-weight: 500;
@@ -55,11 +57,11 @@
         cursor: pointer;
       }
 
-      div {
+      .nav__dropdown__header {
         display: flex;
         gap: 5px;
       }
-      div:hover {
+      .nav__dropdown__header:hover {
         cursor: pointer;
       }
     }
@@ -71,10 +73,19 @@
       border-radius: 10px;
       padding: 5.8px;
       align-items: flex-start;
+
       gap: 8px;
       display: none;
       @media (max-width: 580px) {
         display: flex;
+      }
+
+      &--open {
+        position: fixed;
+        right: 20px;
+        top: 24px;
+        z-index: 500;
+        transition: all 0.5s ease-in;
       }
     }
     .nav__menu:hover {
@@ -84,5 +95,74 @@
     @media (max-width: 580px) {
       gap: 8px;
     }
+  }
+
+  &__dropdown {
+    &:hover {
+      .nav__dropdown__content {
+        display: flex;
+      }
+    }
+
+    &__content {
+      display: none;
+      z-index: 2;
+      position: absolute;
+      transform: translate(-35%, 0);
+      background-color: #373c4b;
+      border-radius: 20px;
+
+      flex-direction: column;
+
+      :first-child {
+        border-radius: 20px 20px 0 0;
+      }
+      :last-child {
+        border-radius: 0 0 20px 20px;
+      }
+      a {
+        padding: 12px;
+        &:hover {
+          background-color: lighten(#373c4b, 10);
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 100dvw;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #373c4b;
+  z-index: 499;
+  padding: 40px;
+  transition: all 0.5s ease-in;
+
+  &--open {
+    left: 0;
+  }
+
+  &__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    a {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  &__heading {
+    font-size: 14px;
+    align-self: flex-start;
+    border-bottom: 1px solid white;
+    width: 100%;
   }
 }
